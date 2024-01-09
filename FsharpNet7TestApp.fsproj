@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AndroidKeyStore>False</AndroidKeyStore>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AndroidKeyStore>False</AndroidKeyStore>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="AndroidManifest.xml" />
+    <Compile Include="MainActivity.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="7.0.200" />
+    <PackageReference Include="FSharp.Android.Resource" Version="1.0.4" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.1" />
+    <PackageReference Include="Xamarin.AndroidX.CoordinatorLayout" Version="1.2.0.5" />
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.10.0" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.8.0.1" />
+  </ItemGroup>
+</Project>
